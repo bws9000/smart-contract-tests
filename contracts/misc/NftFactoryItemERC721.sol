@@ -14,6 +14,5 @@ contract NftFactoryItemERC721 is IFactoryItem{
     )external returns(address){
         BasicERC721 nftToken = new BasicERC721(name,symbol,uri);
         return address(nftToken);
-
     }
  }

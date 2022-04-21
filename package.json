@@ -6,7 +6,7 @@
     "tests": "tests"
   },
   "scripts": {
-    "test": "truffle compile && mocha --recursive tests --exit"
+    "test": "truffle compile && mocha --recursive tests --timeout 5000 --exit"
   },
   "dependencies": {
     "@openzeppelin/cli": "^2.8.2",
