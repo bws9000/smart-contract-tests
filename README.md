@@ -1,2 +1,5 @@
 # smart-contract-tests
-testing for educational purposes
+Testing contracts for educational purposes
+
+# contents
+* Factory Design Pattern with Solidity
