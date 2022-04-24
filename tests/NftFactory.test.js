@@ -32,7 +32,8 @@ describe('NftFactory', function () {
           [],
           { from: addr1 });
 
-          console.log(receipt.logs);
+          expect(receipt.logs.filter(res => res.event === 'NftSpawned')[0]
+          .args.newNft).to.have.lengthOf(42);
       });
 
   });
