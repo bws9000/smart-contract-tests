@@ -33,6 +33,7 @@ describe('BasicERC721', function () {
         // _tokenIds are currently public in our NFT
         // we're accessing the value of the Counter struct directly for this example
         // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol
+        // not recommended, just for testing purposes to prove a point...
         expect(Number(count)).to.equal(2);
     });
 
