@@ -24,8 +24,7 @@ describe('NftFactory', function () {
 
   });
 
-
-
+  
   describe('Spawn Nft with NftFactory ( ERC721 not subscribed )', function () {
 
       it('will revert', async function(){

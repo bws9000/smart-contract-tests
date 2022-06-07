@@ -3,8 +3,9 @@ pragma solidity 0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract BasicERC721 is ERC721 {
+contract BasicERC721 is ERC721, ReentrancyGuard {
 
     event UpdatedMintStatus( bool oldValue, bool newValue );
     
@@ -30,7 +31,7 @@ contract BasicERC721 is ERC721 {
         _tokenIds.increment();
     }
 
-    function mintOneNft() external onlyIfPublicMintStatus {
+    function mintOneNft() external onlyIfPublicMintStatus nonReentrant {
         _safeMint(msg.sender, _tokenIds.current());
         _tokenIds.increment();
     }
